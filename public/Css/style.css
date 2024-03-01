@@ -1,7 +1,8 @@
 :root {
-    --cor1: #FFEE00;
-    --cor2: #0F1A6C;
-    
+    --cor1: #3C6973;
+    --cor2: #7AB3BF;
+    --cor3: #C2E9F2;
+
 }
 
 * {
@@ -11,7 +12,6 @@
 }
 
 /*nav*/
-
 nav {
     background-color: var(--cor2);
     padding: 1em;
@@ -34,6 +34,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
+    font-weight: bolder;
 }
 
 nav ul li:hover {
@@ -44,13 +45,68 @@ nav ul li:hover {
 nav ul li a:hover {
     text-decoration: underline;
 }
-   
+
   
 
+/* section Home */
 
+#home {
+    background-color: var(--cor1);
+}
 
-section {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: gray;
+.home-container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+}
+
+.home-container .home-rigth img {
+    border: 5px solid rgba(173, 216, 230, 0.37);
+    border-radius: 50%;
+    margin-top: 5rem;
+}
+
+.home-container .home-left h1 {
+    color: var(--cor2);
+    font-size: 2rem;
+    font-weight: bolder;
+} 
+
+.home-container .home-left h1 {
+    color: var(--cor3);
+    font-size: 2rem;
+} 
+
+.home-left h2,p {
+    padding-block: 1rem;
+    font-weight: bolder;
+    color: white;
+}
+
+.home-left button {
+    padding: 0.8rem;
+    background-color: var(--cor3);
+    border-radius: 9%;
+    border: none;
+}
+
+.home-left button:hover {
+   cursor: pointer;
+   background-color: white;
+}
+
+.home-left button a  {
+    text-decoration: none;
+    color: var(--cor1);
+    font-weight: bolder;
+}
+
+.social_midia {
+    padding-block: 1.5rem;
+}
+
+.social_midia  a:hover{
+    transform: scale(2.1);
+    transition: 0.1s;
 }
