@@ -12,38 +12,111 @@
 }
 
 /*nav*/
-nav {
-    background-color: var(--cor2);
-    padding: 1em;
-    position: fixed;
-    width: 95%;
-    top: 0;
-    z-index: 1000;
-}
-nav ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+
+.menu {
+    display: none;
 }
 
-nav ul li {
-    margin-left: 0.9rem;
+.menu-btn {
+    display: none;
+    cursor: pointer;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bolder;
+@media screen and (max-width: 768px) {
+
+    .menu-btn {
+        display: block;
+        background-color: var(--cor3);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .menu {
+        display: none;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor2);
+        text-align: center;
+        z-index: 1000;
+        transition: top 0.3s;
+    }
+
+    .menu.show {
+        top: 2em;
+        display: block;
+        padding-top: 2em;
+        
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .menu ul li {
+        padding-block: 1em;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+    }
+    
+    .menu ul li:hover {
+        background-color: var(--cor3);
+    }
 }
 
-nav ul li:hover {
-    transform: scale(1.1);
-    transition: 0.1s;
-}
+@media screen and (min-width: 769px) and (max-width: 1920px){
+    
+    .menu-btn {
+        display: none;
+        cursor: pointer;
+    }
 
-nav ul li a:hover {
-    text-decoration: underline;
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        background-color: var(--cor2);
+        padding: 1em;
+        position: fixed;
+        width: 98%;
+        top: 0;
+        z-index: 1000;
+    }
+    .menu ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    
+    .menu ul li {
+        margin-left: 2rem;
+    
+    }
+    
+    .menu ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+    }
+    
+    .menu ul li:hover {
+        transform: scale(1.1);
+        transition: 0.1s;
+    }
+    
+    .menu ul li a:hover {
+        text-decoration: underline;
+    }
+
 }
 
   
@@ -106,7 +179,13 @@ nav ul li a:hover {
     padding-block: 1.5rem;
 }
 
-.social_midia  a:hover{
-    transform: scale(2.1);
-    transition: 0.1s;
+.social_midia a img{
+   border-color: solid 3px #3C6973;
+  
+}
+
+.social_midia a:hover img{
+    transform: scale(1.1);
+    transition: 0.3s;
+    
 }

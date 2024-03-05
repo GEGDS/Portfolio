@@ -1,7 +1,7 @@
 <%- include("partials/header.ejs") %>
 
-<nav>
-
+<button class="menu-btn"><img src="/Images/icons/lista.png" alt=" icone lista menu" width="30px" height="30px"></button>
+<nav class="menu">
     <ul class="itens">
         <li><a href="#home">home</a></li>
         <li><a href="#sobre">Sobre</a></li>
@@ -31,11 +31,11 @@
 
     <div class="social_midia">
         <a href="https://github.com/GEGDS" class="social_media_icon" target="_blank">
-            <img src="/Images/icons/github.png" alt="icone github" width="50px" height="50px">
+            <img src="/Images/icons/github.svg" alt="icone github">
         </a>
         
         <a href="https://www.linkedin.com/in/gabriel-silva-39a71b217/" class="social_media_icon" target="_blank">
-            <img src="/Images/icons/linkedin.png" alt="icone linkedin" width="50px" height="50px">
+            <img src="/Images/icons/linkedin.svg" alt="icone linkedin">
         </a>
         
     <div>
@@ -100,6 +100,15 @@
     </div>
 
 </section>
+
+<script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.menu');
+
+    menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+</script>
 
 
 <%- include("partials/footer.ejs") %>
