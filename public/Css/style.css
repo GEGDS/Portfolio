@@ -11,6 +11,43 @@
     padding: 0;
 }
 
+h1,h2 {
+    color: var(--cor2);
+    font-weight: bolder;
+    position: relative;
+    text-align: center;
+} 
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 70%;
+    height: 3px;
+    background-image: linear-gradient(to right,#3C6973, #7AB3BF, #C2E9F2, #7AB3BF, #3C6973);
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 70%;
+    height: 3px;
+    background-image: linear-gradient(to right,#3C6973, #7AB3BF, #C2E9F2, #7AB3BF, #3C6973);
+}
+
 /*nav*/
 
 .menu {
@@ -42,12 +79,6 @@
     border-radius: 50%;
     margin-top: 5rem;
 }
-
-.grid-container .home-left h1 {
-    color: var(--cor2);
-    font-size: 2rem;
-    font-weight: bolder;
-} 
 
 
 .home-left h2,p {
@@ -88,6 +119,51 @@
     transition: 0.3s;
     
 }
+
+/*sobre*/
+
+#sobre {
+    height: 80vh;
+    background-color: var(--cor1);
+}
+
+#sobre .title {
+    padding-block: 4em;
+}
+
+#sobre .about-content {
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#sobre .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#sobre .icon {
+    cursor: pointer;
+    padding: 1rem;
+    width: 50px;
+    height: 50px;
+    transition: fill 0.3s;
+}
+
+#sobre .icon:hover {
+    filter: saturate(10%);
+}
+
+
+
+
+
+
+
 
 
 
@@ -205,23 +281,7 @@
     }
 
 
-    .grid-container .home-left h1 {
-        color: var(--cor2);
-        font-size: 3rem;
-        font-weight: bolder;
-        position: relative;
-    } 
 
-    h1::after {
-        content: "";
-        position: absolute;
-        bottom: -5px; 
-        left: 50%; 
-        transform: translateX(-50%); 
-        width: 80%;
-        height: 3px;
-        background-image: linear-gradient(to right,#3C6973, #7AB3BF, #C2E9F2, #7AB3BF, #3C6973);
-    }
 
     .home-left p {
         padding-block: 1rem;
