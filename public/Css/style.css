@@ -160,9 +160,50 @@ h2::after {
 
 
 
+/* Qualificações*/
+.title {grid-area: titulo;}
+.jobs { grid-area: trabalhos; }
+.educational-experience { grid-area: formações; }
+
+#qualificações {
+    background-color: var(--cor1);
+}
+
+.grid-container-2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding-block: 8em;
+    grid-template-areas:
+        'titulo titulo'
+        'trabalhos formações'
+        'trabalhos formações';
+}
+
+.grid-container-2 caption  {
+    font-weight: bolder;
+    font-size: 2em;
+    color: var(--cor3);
+    text-align: center;
+}
+
+.grid-container-2 dl {
+    border: 5px solid var(--cor3);
+    text-align: center;
+}
+.grid-container-2 dt,dd {
+    padding: 1.2em;
+}
 
 
+dt:nth-child(odd) {
+    background: var(--cor2);
+}
 
+dd:nth-child(even) {
+    background: var(--cor3);
+}
 
 
 
@@ -262,15 +303,15 @@ h2::after {
     }
 
 
-    .home-rigth { grid-area: imagem; }
+    .home-rigth { grid-area: image; }
     .home-left { grid-area: content-txt; }
     .social_midia { grid-area: social; }
 
     .grid-container {
         display: grid;
         grid-template-areas:
-        'social imagem imagem content-txt '
-        'social imagem imagem content-txt';
+        'social image image content-txt '
+        'social image image content-txt';
 
         padding: 7em;
     }
