@@ -48,6 +48,8 @@ h2::after {
     background-image: linear-gradient(to right,#3C6973, #7AB3BF, #C2E9F2, #7AB3BF, #3C6973);
 }
 
+
+
 /*nav*/
 
 .menu {
@@ -214,14 +216,55 @@ dd:nth-child(even) {
 }
 
 /* Contato */
-
 #contato {
     background-color: var(--cor1);
+    color: var(--cor3);
 }
+
+.icon-contato {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-block: 6em;
+}
+
+.icon-contato .email {
+    text-decoration: none;
+    color: white
+}
+
+.icon-contato .email:hover {
+    color: var(--cor3);
+}
+
+
 
 /* Footer */
 footer {
     background-color: var(--cor1);
+    
+}
+
+footer hr {
+    border-color: var(--cor3);
+}
+
+footer .social-midia-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-block: 2em;
+}
+
+footer .rodapé {
+    color: whitesmoke;
+    padding-block: 2em;
+    text-align: center;
+    color: whitesmoke;
 }
 
 
@@ -367,6 +410,20 @@ footer {
             'titulo titulo'
             'trabalhos formações'
             'trabalhos formações';
+    }
+
+
+    /*contato*/
+
+    .icon-contato {  
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-evenly;
+    }
+
+    /* footer */
+    footer .social-midia-footer {
+        flex-direction: row;
     }
 
 }
