@@ -215,6 +215,65 @@ dd:nth-child(even) {
     background-color: var(--cor1);
 }
 
+.container-carousel {
+   position: relative;
+   width: 50%;
+   margin: 0 auto;
+   padding-block: 6em;
+}
+
+h4 {
+    color: white;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 500px;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.btn-projetos {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.btn-projetos #prevBtn,#nextBtn {
+    width: 6em;
+    height: 2em;
+    background-color: var(--cor2);
+    border: solid var(--cor3) 2px;
+}
+
+.btn-projetos #prevBtn,#nextBtn:hover {
+    cursor: pointer;
+   
+}
+
+
+.active {
+    display: block;
+}
+
+.description {
+    padding-top: 2em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
 /* Contato */
 #contato {
     background-color: var(--cor1);
@@ -244,7 +303,7 @@ dd:nth-child(even) {
 
 /* Footer */
 footer {
-    background-color: var(--cor1);
+    background-color: var(--cor2);
     
 }
 
@@ -258,6 +317,20 @@ footer .social-midia-footer {
     justify-content: center;
     flex-direction: column;
     padding-block: 2em;
+}
+
+.list-footer {
+    text-align: center;
+    font-size: 1em;
+}
+
+.list-footer  a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.list-footer p {
+    color: white;
 }
 
 footer .rodapé {
